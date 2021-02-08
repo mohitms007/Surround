@@ -47,7 +47,15 @@ input:focus{
   border: 2px solid #5cb85c;
   outline: none;
 }
+.search{
+  margin-right: 10px;
+  height: 2%;
+  margin-top: 40px;
 
+}
+.search-btn{
+  margin-top: 200px
+}
 
 .button {
   border: none;
@@ -239,6 +247,18 @@ textarea {
   max-width: 500px;
 }
 
+.new_story-title{
+  font-family: 'Titillium Web',Montserrat,sans-serif;
+  color:#5cb85c
+
+}
+.card{
+  background-color: bisque;
+  border-radius: 15px; 
+  padding: 20px;
+  width: 40%;
+  margin-top: 20px;
+}
 
 /* Login */
 
@@ -267,5 +287,8 @@ textarea {
   }
   .reset-container{
     align-items: center;
+  }
+  .card{
+    flex-direction: column;
   }
 }
