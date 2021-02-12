@@ -1,4 +1,4 @@
-# Surround (under development stage: 80% completed)
+# Surround (Styling under Development)
 A Tech-Community Sharing Platform using which users can post, comment, link anything related to technology.
 
 ## Getting started
