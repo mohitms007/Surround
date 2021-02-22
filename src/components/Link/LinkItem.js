@@ -62,7 +62,7 @@ function LinkItem({index, showCount, link, history}) {
 
     return (
         <div class="card border-success">
-            <div class="card-header border-success" >
+            <div className="card-header" >
             {link.postedBy.name}
             </div>
             <div class="card-body">
