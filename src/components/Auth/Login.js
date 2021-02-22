@@ -40,7 +40,7 @@ function Login(props) {
 
     return (
         <div className="login-form">
-            <h2 className="mv3 tc items-center">{login
+            <h2 className="mv3 tc login items-center">{login
                     ? "Login"
                     : "Create Account"}</h2>
             <form onSubmit={handleSubmit} className="flex flex-column items-center">

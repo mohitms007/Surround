@@ -1,0 +1,14 @@
+<svg width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.7" stroke="#303030" fill="none" id="svg_3" d="m25.907926,23.133328c-0.71456,0.42315 -1.54888,0.66666 -2.43909,0.66666c-2.64667,0 -4.79435,-2.14768 -4.79435,-4.79435s2.14768,-4.79435 4.79435,-4.79435s4.79435,2.14767 4.79435,4.79435c0,0.994 -0.30339,1.91614 -0.81835,2.67861" class="st1"/>
+  <path stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.7" stroke="#303030" fill="none" id="svg_4" d="m20.194263,18.044217c0,-1.49817 1.56483,-2.78819 3.063,-2.78819" class="st1"/>
+  <polyline stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.7" stroke="#303030" fill="none" id="svg_5" points="27.31339120864868,21.749955654144287 27.5090012550354,23.478484630584717 25.77649164199829,23.199044704437256 " class="st1"/>
+  <path stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.7" stroke="#303030" fill="none" id="svg_8" d="m20.287129,30.809328l0.03,0.04l3.15001,4.35001c0.10272,0.13467 0.44284,0.12592 0.54001,-0.02002l3.16998,-4.31999l0.04,-0.05l11.8,0c0.64,0 1.16,-0.52 1.16,-1.16l0,-19.07c0,-0.64 -0.52,-1.16 -1.16,-1.16l-30.56,0c-0.64,0 -1.16,0.52 -1.16,1.16l0,19.07c0,0.64 0.52,1.16 1.16,1.16l11.83,0z" class="st1"/>
+ </g>
+</svg>

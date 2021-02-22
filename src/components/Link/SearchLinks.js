@@ -40,6 +40,7 @@ function SearchLinks() {
             return (link.description.toLowerCase().includes(query) || link.url.toLowerCase().includes(query) || link.postedBy.name.toLowerCase().includes(query));
         });
         setFilteredLinks(matchedLinks);
+    
     }
 
     return (
@@ -62,8 +63,3 @@ function SearchLinks() {
 
 export default SearchLinks;
 
-// return (   <div>       <form className="flex justify-center items-baseline">
-//         <input className="search" placeholder="Search"/>           <button
-// className="button flex flex-column  btn-submit">OK</button>       </form>
-// {filteredLinks.map((filteredLink, index) => (       <LinkItem
-// key={filteredLink.id} showCount={false} index={index} />    ))}   </div> )

@@ -16,9 +16,10 @@ function CreateLink(props) {
        if(!user){
          props.history.push('/login')
        }else{
-         const {url,description} = values
+         const {url,description,title} = values
        const newLink = {
          url,
+         title,
          description,
          postedBy: {
            id: user.uid,
@@ -38,6 +39,14 @@ function CreateLink(props) {
         <form onSubmit={handleSubmit} className="flex items-center flex-column mt6">
           <h1 className="new_story-title"> Add your Story</h1>
             <input
+                name="title"
+                onChange={handleChange}
+                value={values.title}
+                placeholder="Title for your Story"
+                autoComplete="off"
+                type="text"
+                className={errors.title && 'error-input'}/> {errors.title && <p className="error-text">{errors.title}</p>}
+             <input
                 name="description"
                 onChange={handleChange}
                 value={values.description}

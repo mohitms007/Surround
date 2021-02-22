@@ -37,7 +37,7 @@ function Header() {
                     <>
                      <div className="header-name link">{user.displayName}</div>
                      <div className="divider">|</div>
-                     <NavLink to="/" className="header-link link" onClick={() => firebase.logout()}> Logout </NavLink>
+                     <NavLink to="/" className="header-link" onClick={() => firebase.logout()}> Logout </NavLink>
                     </>
                 ) : <NavLink to="/login" className="header-link">
                     Login
