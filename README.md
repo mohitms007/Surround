@@ -1,4 +1,4 @@
-# Surround (Styling under Development)
+# Surround
 A Tech-Community Sharing Platform using which users can post, comment, link anything related to technology.
 
 ## Getting started
