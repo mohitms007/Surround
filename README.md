@@ -22,6 +22,14 @@ The application is a tech news site called "Surround". It uses a custom API for 
 - CR*D Comments on articles (no updating required)
 - GET and display paginated lists of articles
 - Favorite articles, Likes
+**Functions to be added or fixed**
+- Fix like/dislike button function to a user only can like one time
+- style fix
+- bookmarks
+- testing different components
+- likes on comments
+- delete a comment
+- And much more...
 
 **The general page breakdown looks like this:**
 
