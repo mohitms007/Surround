@@ -95,8 +95,9 @@ function LinkList(props) {
     const pageIndex = page
         ? (page - 1) * 6 + 1
         : 0;
-    return (
-        <div className="flex card-items flex-column items-center">
+    if(links.length != 0){
+        return(
+            <div className="flex card-items flex-column items-center">
             {renderLinks().map((link, index) => (<LinkItem key={link.id} showCount={true} link={link} index={index + pageIndex}/>))}
             {isNewPage && (
                 <div className="pagination">
@@ -107,7 +108,11 @@ function LinkList(props) {
                 </div>
             )}
         </div>
-    );
+        )
+    }else{
+        return <div className="flex justify-center" style={{color:"white"}}> Loading... </div>
+    }
+  
 }
 
 export default LinkList;

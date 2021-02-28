@@ -45,7 +45,7 @@ function LinkDetail(props) {
   }
 
   return !link ? (
-    <div>Loading...</div>
+    <div style={{color:"white"}}>Loading...</div>
   ) : (
     <div>
       <LinkItem showCount={false} link={link} />
@@ -60,14 +60,16 @@ function LinkDetail(props) {
           Add Comment
         </button>
       </div>
+      <div className="mv3 comment-box">
       {link.comments.map((comment, index) => (
         <div key={index}>
           <p className="comment-author">
             {comment.postedBy.name} | {distanceInWordsToNow(comment.created)}
           </p>
-          <p>{comment.text}</p>
+          <p className="comment-text">{comment.text}</p>
         </div>
       ))}
+      </div>
     </div>
   );
 }

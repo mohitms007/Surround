@@ -187,6 +187,19 @@ input:focus{
   height: 28px;
   margin-top: 2px;
 }
+.comment-text{
+  color: white;
+}
+.comment-main{
+  font-family: consolas;
+}
+.btn{
+  font-family: consolas;
+}
+.comment-box{
+  background-color: black;
+  padding: 10px;
+}
 .header-name {
   color: black;
   text-decoration: none;
@@ -196,7 +209,14 @@ input:focus{
   margin-left: 0.55rem;
   color: black;
 }
-
+.pagination div{
+  color: gray;
+}
+.time{
+  color: gray;
+  font-size: 0.1px;
+  font-family: consolas,monospace,sans-serif;
+}
 .link {
   color: green;
   font-weight: 700;
@@ -288,6 +308,12 @@ textarea {
   color:#5cb85c
 
 }
+.card-title{
+  font-family: CircularAirPro Book,sans-serif;
+}
+.card-text{
+  font-family: consolas;
+}
 .card-items{
   background-color: transparent;
 }
@@ -360,6 +386,9 @@ textarea {
   }
   .button{
     max-width: 150px;
+  }
+  .icons{
+    margin-top: 13px;
   }
   .header{
     flex-direction: column;

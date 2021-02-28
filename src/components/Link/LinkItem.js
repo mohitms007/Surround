@@ -3,9 +3,9 @@ import {Link, withRouter} from 'react-router-dom'
 import {getDomain} from '../../utils'
 import distanceToWordsToNow from 'date-fns/distance_in_words_to_now'
 import {FirebaseContext} from "../../firebase";
-import { linkSync } from "fs";
-import { ReactComponent as Like } from '../../images/love.svg';
-import { ReactComponent as Comment } from '../../images/comment.svg';
+import {linkSync} from "fs";
+import {ReactComponent as Like} from '../../images/love.svg';
+import {ReactComponent as Comment} from '../../images/comment.svg';
 
 function LinkItem({index, showCount, link, history}) {
 
@@ -62,21 +62,43 @@ function LinkItem({index, showCount, link, history}) {
 
     return (
         <div class="card border-success">
-            <div className="card-header" >
-            {link.postedBy.name}
+            <div className=" card-header">
+                <div>
+                {link.postedBy.name}
+                </div>
+                
             </div>
+           
             <div class="card-body">
-                <h5 class="card-title">{link.title}</h5>
+                <div className="flex justify-between"><h5 class="card-title">{link.title}</h5>
+                <p className="flex justify-end time">{distanceToWordsToNow(link.created)} ago</p>
+                    </div>
                 <p class="card-text">{link.description}</p>
-                <a href="#" class="btn btn-primary check-btn">Check Story</a>
-                <div className="di flex justify-end">
-                {link.votes.length}
-                <Like className="like" onClick={handleVote}/>
-                 {link.comments.length}
-                 <Comment className="like comment"/>
+                <a href={link.url} class="btn btn-primary check-btn">Check Story</a>
+                <div className="di flex icons justify-end">
+                    {link.votes.length}
+                    <Like className="like" onClick={handleVote}/> {link.comments.length}
+                    <Link to={`/link/${link.id}`}><Comment className="like comment"/></Link>
+                    <Link className="link comment-main" to={`/link/${link.id}`}>
+                        {link.comments.length > 0
+                            ? `${link.comments.length} comments`
+                            : "discuss"}
+                    </Link>
+                </div>
+                {postedByAuthUser && (
+                    <div>
+                        <span className="delete-button ml1 mb7" onClick={handleDeleteLink}>
+                            <div>
+                            Delete
+                            </div>
+                            
+                        </span>
+                       
+                    </div>
+                )}
+              
             </div>
-            </div>
-            
+
         </div>
 
     )
@@ -84,19 +106,3 @@ function LinkItem({index, showCount, link, history}) {
 }
 
 export default withRouter(LinkItem);
-
-// <div className="flex card">     <div className="ml1">         <div>
-//   <a href={link.url} className="black no-underline">{link.description}</a>
-//          <span className="link">                 ({getDomain(link.url)})
-//        </span>         </div>         <div className="f6 flex items-end
-// lh-copy gray">           <div className="mr1"> {link.votes.length} votes by
-// {link.postedBy.name} {distanceToWordsToNow(link.created)} </div>           {"
-// | "}           <Link to={`/link/${link.id}`}>
-// {link.comments.length > 0 ? `${link.comments.length} comments`             :
-// "discuss"           }           </Link>           {postedByAuthUser && (
-//        <>             <span className="delete-button ml1"
-// onClick={handleDeleteLink}> Delete </span>             </>           )}
-//   </div>         <div className="flex items-end">         {showCount && <span
-// className="gray">{index}.</span>}         <div onClick={handleVote}
-// className="vote-button">             up         </div>     </div>     </div>
-// </div>
