@@ -14,6 +14,7 @@ function LinkDetail(props) {
     getLink();
   }, []);
 
+  
   function getLink() {
     linkRef.get().then(doc => {
       setLink({ ...doc.data(), id: doc.id });
